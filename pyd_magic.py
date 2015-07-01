@@ -148,7 +148,7 @@ class PydMagics(Magics):
             pyd_dub_json['libs'] = ['phobos2']
 
             with open(pyd_dub_file, 'w') as f:
-                f.write((json.dumps(pyd_dub_json)+"\n"))
+                f.write((json.dumps(pyd_dub_json).encode('utf-8')+"\n"))
             #with io.open(pyd_dub_file, 'w',encoding='utf-8') as f:
             #    f.write((json.dumps(pyd_dub_json)+"\n").encode('utf-8'))
             try:
