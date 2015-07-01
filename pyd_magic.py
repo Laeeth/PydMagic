@@ -149,8 +149,8 @@ class PydMagics(Magics):
 
             with open(pyd_dub_file, 'w') as f:
                 f.write((json.dumps(pyd_dub_json)+"\n"))
-            'with io.open(pyd_dub_file, 'w',encoding='utf-8') as f:
-            '    f.write((json.dumps(pyd_dub_json)+"\n").encode('utf-8'))
+            #with io.open(pyd_dub_file, 'w',encoding='utf-8') as f:
+            #    f.write((json.dumps(pyd_dub_json)+"\n").encode('utf-8'))
             try:
                 os.remove(os.path.join(lib_dir, 'dub.selections.json'))
             except:
